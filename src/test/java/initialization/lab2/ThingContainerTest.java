@@ -36,7 +36,8 @@ public class ThingContainerTest {
 		ThingContainer thingContainer = new ThingContainer(colourfulThingArray);
 		
 		//:When
-		String expected = "*** Output ***\nGREEN\nBLUE\nSALMON";
+		String expected = "*** Output ***\nGREEN\nBLUE\nSALMON"
+				+ "";
 				
 		String actual = thingContainer.printStrings();
 		
