@@ -55,7 +55,7 @@ This lab focuses on initializing objects using constructors and overloading cons
 
 ## Unit Test
 
-You are expected to write unit tests for your code in this lab. Be sure to test the behavior of `ThingContainer` in multiple scenarios, including testing the `add` method when the `ThingContainer is or is not full. You are responsible for determining which other methods need to be tested and how to test them. Remember to practice Test Driven Development as you work on this lab.
+You are expected to write unit tests for your code in this lab. Be sure to test the behavior of `ThingContainer` in multiple scenarios, including testing the `add` method when the `ThingContainer is or is not full. You 	are responsible for determining which other methods need to be tested and how to test them. Remember to practice Test Driven Development as you work on this lab.
 
 ## Instructions
 
