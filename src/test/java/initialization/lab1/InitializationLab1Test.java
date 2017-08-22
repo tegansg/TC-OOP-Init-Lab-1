@@ -2,13 +2,11 @@ package initialization.lab1;
 
 import org.junit.Test;
 
-import initialization.lab1.ColourfulThing.Colour;
-
 import org.junit.Assert;
 
-public class InitializationLab1Test {
-	
-	
+public class InitializationLab1Test 
+{
+
 	@Test
 	public void getColorTest()
 	{
@@ -21,6 +19,6 @@ public class InitializationLab1Test {
 		
 		//:Then
 		Assert.assertEquals(expected, actual);
-	
+	}
 	
 }

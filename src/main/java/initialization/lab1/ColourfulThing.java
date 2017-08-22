@@ -2,8 +2,6 @@ package initialization.lab1;
 
 public class ColourfulThing {
 	
-	public enum Colour {RED, BLUE, PURPLE, GREEN, ORANGE, SALMON}
-	
 	private Colour colour;
 	
 	public ColourfulThing(Colour colour)
@@ -15,6 +13,5 @@ public class ColourfulThing {
 	{
 		return colour;
 	}
-
 	
 }

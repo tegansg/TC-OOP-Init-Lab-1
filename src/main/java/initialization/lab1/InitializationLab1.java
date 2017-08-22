@@ -1,7 +1,5 @@
 package initialization.lab1;
 
-import initialization.lab1.ColourfulThing.Colour;
-
 public class InitializationLab1 {
 	
 	public static void main(String[] args)

@@ -1,6 +1,6 @@
 package initialization.lab2;
 import initialization.lab1.ColourfulThing;
-import initialization.lab1.ColourfulThing.Colour;
+import initialization.lab1.Colour;
 
 public class ThingContainer 
 {
@@ -30,7 +30,7 @@ public class ThingContainer
 		   break;
 		}
 		
-		else if(x == (containerArray.length - 1))
+		else if (x == (containerArray.length - 1))
 		{
 			System.out.print("ThingContainer is full");
 		}
@@ -47,7 +47,7 @@ public class ThingContainer
 		{
 			if(containerArray[x]!=null)
 			{
-			   response += "\n" + containerArray[x].getColour().toString();
+			   response += "\n" + containerArray[x].getColour();
 			}
 		}
 		
@@ -62,13 +62,11 @@ public class ThingContainer
 		{
 			if(containerArray[x]!=null)
 			{
-			    response += containerArray[x].getColour().toString();
+			    response += containerArray[x].getColour();
 			    containerArray[x] = null;
 			    break;
 			}
 		}
-		
-		
 		return response;
 	}
 	

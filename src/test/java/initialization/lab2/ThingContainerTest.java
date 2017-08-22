@@ -3,14 +3,15 @@ package initialization.lab2;
 import org.junit.Test;
 
 import initialization.lab1.ColourfulThing;
-import initialization.lab1.ColourfulThing.Colour;
+import initialization.lab1.Colour;
 
 import org.junit.Assert;
 
-public class ThingContainerTest {
+public class ThingContainerTest 
+{
 
 	@Test
-	public void initialTest()
+	public void constructorTest()
 	{
 		//:Given
 		ThingContainer thingContainer = new ThingContainer(6);
@@ -36,8 +37,10 @@ public class ThingContainerTest {
 		ThingContainer thingContainer = new ThingContainer(colourfulThingArray);
 		
 		//:When
-		String expected = "*** Output ***\nGREEN\nBLUE\nSALMON"
-				+ "";
+		String expected = "*** Output ***"
+				+ "\nGREEN"
+				+ "\nBLUE"
+				+ "\nSALMON";
 				
 		String actual = thingContainer.printStrings();
 		
@@ -51,50 +54,30 @@ public class ThingContainerTest {
 		//:Given
 		ThingContainer thingContainer = new ThingContainer(4);
 		
-		ColourfulThing colourfulThing1 = new ColourfulThing(Colour.GREEN);
-		ColourfulThing colourfulThing2 = new ColourfulThing(Colour.BLUE);
-		ColourfulThing colourfulThing3 = new ColourfulThing(Colour.SALMON);
-		
-		thingContainer.addToThingContainer(colourfulThing1);
-		thingContainer.addToThingContainer(colourfulThing2);
-		thingContainer.addToThingContainer(colourfulThing3);
-
+		ColourfulThing a = new ColourfulThing(Colour.GREEN); thingContainer.addToThingContainer(a);
+		ColourfulThing b = new ColourfulThing(Colour.BLUE); thingContainer.addToThingContainer(b);
+		ColourfulThing c = new ColourfulThing(Colour.SALMON); thingContainer.addToThingContainer(c);
 		
 		//:When
 		ColourfulThing actual1 = thingContainer.returnIndex(0);
+		ColourfulThing expected1 = a;
+		
 		ColourfulThing actual2 = thingContainer.returnIndex(1);
+		ColourfulThing expected2 = b;
+		
 		ColourfulThing actual3 = thingContainer.returnIndex(2);
+		ColourfulThing expected3 = c;
+		
 		ColourfulThing actual4 = thingContainer.returnIndex(3);
-		
-		
-		ColourfulThing expected1 = colourfulThing1;
-		ColourfulThing expected2 = colourfulThing2;
-		ColourfulThing expected3 = colourfulThing3;
 		ColourfulThing expected4 = null;
 		
-			
 		//:Then
 		Assert.assertEquals(actual1, expected1);
 		Assert.assertEquals(actual2, expected2);
 		Assert.assertEquals(actual3, expected3);
 		Assert.assertEquals(actual4, expected4);
 	}
-	
-//	public void fullAddToThingContainerTest()
-//	{
-//		//:Given
-//		ThingContainer thingContainer = new ThingContainer(2);
-//		thingContainer.addToThingContainer(Colour.GREEN);
-//		thingContainer.addToThingContainer(Colour.BLUE);
-//		thingContainer.addToThingContainer(Colour.SALMON);
-//		
-//		//:When
-//		
-//			
-//		
-//		//:Then
-//		
-//	}
+
 	
 	@Test
 	public void printStringsTest()
@@ -106,11 +89,12 @@ public class ThingContainerTest {
 		thingContainer.addToThingContainer(new ColourfulThing(Colour.BLUE));
 		thingContainer.addToThingContainer(new ColourfulThing(Colour.SALMON));
 		
-		String expected = "*** Output ***\nGREEN\nBLUE\nSALMON";
+		String expected = "*** Output ***"
+						+ "\nGREEN"
+						+ "\nBLUE"
+						+ "\nSALMON";
 		
 		//:When
-		
-		
 		String actual = thingContainer.printStrings();
 		
 		
@@ -205,7 +189,12 @@ public class ThingContainerTest {
 		thingContainer.addToThingContainer(new ColourfulThing(Colour.BLUE));
 		thingContainer.addToThingContainer(new ColourfulThing(Colour.SALMON));
 		thingContainer.addToThingContainer(new ColourfulThing(Colour.BLUE));
-		String expected = "*** Output ***\nGREEN\nSALMON\nBLUE\nRED";
+		
+		String expected = "*** Output ***"
+						+ "\nGREEN"
+						+ "\nSALMON"
+						+ "\nBLUE"
+						+ "\nRED";
 		
 		//:When
 		thingContainer.remove(Colour.BLUE);
@@ -265,8 +254,7 @@ public class ThingContainerTest {
 		String actual = thingContainer.remove(colourfulThing4);
 		
 		//:Then
-		Assert.assertEquals(expected, actual);
-		
+		Assert.assertEquals(expected, actual);	
 	}
 	
 	
@@ -287,7 +275,11 @@ public class ThingContainerTest {
 		thingContainer.addToThingContainer(colourfulThing3);
 		thingContainer.addToThingContainer(colourfulThing4);
 		
-		String expected = "*** Output ***\nGREEN\nSALMON\nBLUE\nRED";
+		String expected = "*** Output ***"
+						+ "\nGREEN"
+						+ "\nSALMON"
+						+ "\nBLUE"
+						+ "\nRED";
 		
 		//:When
 		thingContainer.remove(Colour.BLUE);
